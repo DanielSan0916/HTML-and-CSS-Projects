@@ -1,0 +1,146 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    background-image: url('./images/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+/* Gallery Styles */
+#gallery {
+    padding: 20px;
+    text-align: center;
+}
+
+#gallery h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.photo-container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.photo-container img {
+    width: 1in; /* Set image width to 1 inch */
+    border-radius: 5px;
+}
+
+.photo-container h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+
+.photo-container p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Form Styles */
+#contact {
+    background-color: #eee;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#contact h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #444;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
