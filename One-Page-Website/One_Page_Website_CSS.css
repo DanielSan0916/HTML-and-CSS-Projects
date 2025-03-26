@@ -1,0 +1,167 @@
+/* CSS for Chasing Lights Photography */
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    color: #ffd700;
+}
+
+nav ul li a:before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ffd700;
+    transition: width 0.3s, left 0.3s;
+}
+
+nav ul li a:hover:before {
+    width: 100%;
+    left: 0;
+}
+
+/* Home Section */
+#home {
+    text-align: center;
+    padding: 100px 0; /* Adjusted for fixed nav */
+    background: url('path-to-your-image.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 20px;
+    margin-top: 60px; /* Adjusted for fixed nav */
+}
+
+#gallery h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#gallery .photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#gallery .photo-container div {
+    width: calc(33.333% - 20px);
+    margin: 10px;
+}
+
+#gallery img {
+    width: 10%;
+    height: auto;
+    border: 2px solid #ddd;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+#gallery .photo-container div h3 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+#gallery .photo-container div p {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+/* Bookings Section */
+#contact {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+#contact h1 {
+    text-align: center;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact .rsvp {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#contact .form-spacer {
+    margin-top: 20px;
+}
+
+#contact .terms {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#contact input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
