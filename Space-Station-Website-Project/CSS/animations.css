@@ -81,3 +81,26 @@
     color: #C9BDAA;
     margin-top: 5%;
 }
+
+/*---------------------------------------------------------------
+    Photo overlay Transitions
+---------------------------------------------------------------*/
+.photo-overlay {
+    opacity: 0;
+    transition: opacity .5s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.photo-overlay:hover {
+    opacity: 1;
+}
+
+.photo img {
+    transition: transform .5s;
+    transform-origin: 50% 50%;
+}
+
+.phot:hover img {
+    transform: scale(1.1);
+}
