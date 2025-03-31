@@ -116,8 +116,8 @@ section {
 }
 
 .wrap {
-    height: 50%
-    width: 50%
+    height: 50%;
+    width: 100%;
     position: absolute;
     /* This ensures that the images cannot
      render outside of their container
