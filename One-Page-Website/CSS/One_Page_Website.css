@@ -86,7 +86,7 @@ section {
 .navbar {
     height: 105px;
     max-height: 340px;
-    display: inline-block;
+    display: block;
 }
 
 .container {
@@ -119,7 +119,9 @@ section {
     height: 100%;
     width: 100%;
     position: absolute;
-    /* This ensures that the images cannot render outside of their container wihtout forcing any scrollbars */
+    /* This ensures that the images cannot
+     render outside of their container
+     wihtout forcing any scrollbars */
     overflow: hidden;
     top: 0;
     left: 0;
@@ -130,11 +132,12 @@ section {
     max-height: 340px;
     margin: 0% auto;
     content: " ";
-    /* top: 0; left: 0; */
+    /* top: 0; 
+    left: 0; */
     /* Position absolute; *//* to the top of the screen */
     width: 100%;
     position: fixed;
-    z-index: 100;;
+    z-index: 100;
     /* backgound-color: rgba(255, 255, 255, 0.5); */
 }
 
