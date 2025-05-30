@@ -25,7 +25,7 @@
     /*background-color: #052136;*/
     cursor: pointer;
     transition-property: background;
-    transition-duration: 4s;
+    transition-duration: 0.5s;
     transition-delay: 0s;
     transition-timing-function: ease-in-out;
 }
@@ -57,7 +57,7 @@
     height: 169px;
 }
 
-.phot-container img {
+.photo-container img {
     max-width: 100%;
     width: 300px;
     height: 169px;
@@ -101,6 +101,6 @@
     transform-origin: 50% 50%;
 }
 
-.phot:hover img {
+.photo:hover img {
     transform: scale(1.1);
 }
