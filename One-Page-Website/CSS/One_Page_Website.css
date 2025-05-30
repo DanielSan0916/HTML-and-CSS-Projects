@@ -147,7 +147,7 @@ section {
 #home {
     background: url(../images/website_background.jpg) no-repeat 50% 50%;
     background-attachment: fixed;
-    -webkit-backgorund-size: cover;
+    -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
