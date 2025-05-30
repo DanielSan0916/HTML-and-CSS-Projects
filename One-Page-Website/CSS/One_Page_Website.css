@@ -1,3 +1,50 @@
+/*Lightbox styles*/
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox-content {
+    position: relative;
+    text-align: center;
+}
+
+.lightbox-img {
+    max-width: 80%;
+    max-height: 80vh;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
 /*-------------------------------------------------------------------
     Generic Styles
 -------------------------------------------------------------------*/
@@ -390,53 +437,6 @@ box-shadow: -1px -1px -1px 0 rgba(0, 0, 0, 1), 1px 2px 10px 0 rgba(0, 0, 0, 0.5)
         width: 1170px;;
     }
 }
-
-/*Lightbox styles*/
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.lightbox-content {
-    position: relative;
-    text-align: center;
-}
-
-.lightbox-img {
-    max-width: 80%;
-    max-height: 80vh;
-    border-radius: 8px;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    font-size: 24px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
 
 /*--------------------------------------------------
     END OF CSS STYLES
