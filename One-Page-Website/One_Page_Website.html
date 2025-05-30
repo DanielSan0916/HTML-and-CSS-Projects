@@ -6,10 +6,9 @@
         <link rel="stylesheet" href="./CSS/One_Page_Website.css"> 
         <link rel="stylesheet" href="./CSS/animations.css">
         <script src="./JS/one_page_website.js" defer></script>
-
     </head>
     <body>
-        <!--NAV-->
+        <!-- NAV -->
         <div class="wrap">
             <div class="menu-container">
                 <ul class="menu">
@@ -19,9 +18,9 @@
                 </ul>
             </div>                  
         </div>
-        <!--END NAV-->
+        <!-- END NAV -->
         
-        <!--HOME-->
+        <!-- HOME -->
         <div id="home">
             <div class="container">    
                 <div class="text-center">
@@ -29,166 +28,131 @@
                 </div>
             </div>
         </div>
-        <!--END HOME-->
+        <!-- END HOME -->
         
-        <!--GALLERY-->
+        <!-- GALLERY -->
         <section id="gallery">
             <div class="container">
                 <h1>Gallery</h1>
-                <div class="flex-container">
-                
-                    <!--PHOTO-CONTAINER 1-->
-                    <div class="photo-container">
-                        <div class="photo">
-                            <img src="./images/thumb/thumbnail_1.jpg" alt="">
-                            <div class="photo-overlay">
-                                <h3 class="white-head">Click to Enlarge</h3>
-                                <p>We specialize in Environmental Portraiture</p>
-                            </div>
-                        </div>
+                <div class="row">
+                    <div class="column">
+                        <img src="./images/thumb/thumbnail_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
                     </div>
-                    <!--END PHOTO-CONTAINER 1-->
-                    
-                    <!--PHOTO-CONTAINER 2-->
-                    <div class="photo-container">
-                        <div class="photo">
-                            <img src="./images/thumb/thumbnail_2.png" alt="">
-                            <div class="photo-overlay">
-                                <h3 class="white-head">Click to Enlarge</h3>
-                                <p>We specialize in Environmental Portraiture</p>
-                            </div>
-                        </div>
+                    <div class="column">
+                        <img src="./images/thumb/thumbnail_2.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
                     </div>
-                    <!--END PHOTO-CONTAINER 2-->
-                    
-                    <!--PHOTO-CONTAINER 3-->
-                    <div class="photo-container">
-                        <div class="photo">
-                            <img src="./images/thumb/thumbnail_3.jpg" alt="">
-                            <div class="photo-overlay">
-                                <h3 class="white-head">Click to Enlarge</h3>
-                                <p>We specialize in Environmental Portraiture</p>
-                            </div>
-                        </div>
+                    <div class="column">
+                        <img src="./images/thumb/thumbnail_3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
                     </div>
-                    <!--END PHOTO-CONTAINER 3-->
-                    
-                    <!--PHOTO-CONTAINER 4-->
-                    <div class="photo-container">
-                        <div class="photo">
-                            <img src="./images/thumb/thumbnail_4.jpg" alt="">
-                            <div class="photo-overlay">
-                                <h3 class="white-head">Click to Enlarge</h3>
-                                <p>We specialize in Environmental Portraiture</p>
-                            </div>
-                        </div>
+                    <div class="column">
+                        <img src="./images/thumb/thumbnail_4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
                     </div>
-                    <!--END PHOTO-CONTAINER 4-->
-                    
-                    <!--PHOTO-CONTAINER 5-->
-                    <div class="photo-container">
-                        <div class="photo">
-                            <img src="./images/thumb/thumbnail_5.jpg" alt="">
-                            <div class="photo-overlay">
-                                <h3 class="white-head">Click to Enlarge</h3>
-                                <p>We specialize in Environmental Portraiture</p>
-                            </div>
-                        </div>
+                    <div class="column">
+                        <img src="./images/thumb/thumbnail_5.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
                     </div>
-                    <!--END PHOTO-CONTAINER 5-->
-                    
-                    <!--PHOTO-CONTAINER 6-->
-                    <div class="photo-container">
-                        <div class="photo">
-                            <img src="./images/thumb/thumbnail_6.png" alt="">
-                            <div class="photo-overlay">
-                                <h3 class="white-head">Click to Enlarge</h3>
-                                <p>We specialize in Environmental Portraiture</p>
-                            </div>
-                        </div>
+                    <div class="column">
+                        <img src="./images/thumb/thumbnail_6.png" onclick="openModal();currentSlide(6)" class="hover-shadow">
                     </div>
-                    <!--END PHOTO-CONTAINER 6-->
-                    
-                    <!--PHOTO-CONTAINER 7-->
-                    <div class="photo-container">
-                        <div class="photo">
-                            <img src="./images/thumb/thumbnail_7.jpg" alt="">
-                            <div class="photo-overlay">
-                                <h3 class="white-head">Click to Enlarge</h3>
-                                <p>We specialize in Environmental Portraiture</p>
-                            </div>
-                        </div>
+                    <div class="column">
+                        <img src="./images/thumb/thumbnail_7.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
                     </div>
-                    <!--END PHOTO-CONTAINER 7-->
-                    
-                    <!--PHOTO-CONTAINER 8-->
-                    <div class="photo-container">
-                        <div class="photo">
-                            <img src="./images/thumb/thumbnail_8.jpg" alt="">
-                            <div class="photo-overlay">
-                                <h3 class="white-head">Click to Enlarge</h3>
-                                <p>We specialize in Environmental Portraiture</p>
-                            </div>
-                        </div>
+                    <div class="column">
+                        <img src="./images/thumb/thumbnail_8.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
                     </div>
-                    <!--END PHOTO-CONTAINER 8-->
-                    
-                    <!--PHOTO-CONTAINER 9-->
-                    <div class="photo-container">
-                        <div class="photo">
-                            <img src="./images/thumb/thumbnail_9.png" alt="">
-                            <div class="photo-overlay">
-                                <h3 class="white-head">Click to Enlarge</h3>
-                                <p>We specialize in Environmental Portraiture</p>
-                            </div>
-                        </div>
+                    <div class="column">
+                        <img src="./images/thumb/thumbnail_9.png" onclick="openModal();currentSlide(9)" class="hover-shadow">
                     </div>
-                    <!--END PHOTO-CONTAINER 9-->
-                    
                 </div>
             </div>
         </section>
-        <!--END GALLERY-->
-                    
-        <!--RSVP-->
-        <section id="contact">
-            <div class="container">
-                <div class="heading-padding">
-                    <h1 class="heading-padding">Bookings</h1>
-                    <div class="reservation">
-                        <h2>
-                            <span>Lets make timeless Art that you'll be proud to hang on your wall.</span>
-                            <br/>Book your Session today!
-                        </h2>
-                        <p class="rsvp-text">
-                            Please provide us with your basic contact information.
-                        </p>
-                        <div class="form-rsvp">
-                            <form action="" method="post">
-                                <input class="rsvp" type="text" value="" placeholder="First Name">
-                                <input class="rsvp" type="text" value="" placeholder="Last Name">
-                                <input class="rsvp" type="text" value="" placeholder="Email Address">
-                                <input class="rsvp" type="text" value="" placeholder="Phone Number">
-                                <div class="form-spacer">
-                                    <label class="terms">Terms and Conditions</label>
-                                </div>
-                                <div class="submit">
-                                    <input type="submit" value="submit">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+        <!-- END GALLERY -->
 
+        <!-- LIGHTBOX MODAL -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 9</div>
+                    <img src="./images/fullsize/img1_wide.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">2 / 9</div>
+                    <img src="./images/fullsize/img2_wide.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">3 / 9</div>
+                    <img src="./images/fullsize/img3_wide.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">4 / 9</div>
+                    <img src="./images/fullsize/img4_wide.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">5 / 9</div>
+                    <img src="./images/fullsize/img5_wide.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">6 / 9</div>
+                    <img src="./images/fullsize/img6_wide.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">7 / 9</div>
+                    <img src="./images/fullsize/img7_wide.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">8 / 9</div>
+                    <img src="./images/fullsize/img8_wide.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">9 / 9</div>
+                    <img src="./images/fullsize/img9_wide.jpg" style="width:100%">
+                </div>
+                
+                <!-- Next/prev controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail controls -->
+                <div class="column">
+                    <img class="demo" src="./images/thumb/thumbnail_1.jpg" onclick="currentSlide(1)" alt="Nature">
+                </div>
+                <div class="column">
+                    <img class="demo" src="./images/thumb/thumbnail_2.png" onclick="currentSlide(2)" alt="Snow">
+                </div>
+                <div class="column">
+                    <img class="demo" src="./images/thumb/thumbnail_3.jpg" onclick="currentSlide(3)" alt="Mountains">
+                </div>
+                <div class="column">
+                    <img class="demo" src="./images/thumb/thumbnail_4.jpg" onclick="currentSlide(4)" alt="Lights">
+                </div>
+                <div class="column">
+                    <img class="demo" src="./images/thumb/thumbnail_5.jpg" onclick="currentSlide(5)" alt="City">
+                </div>
+                <div class="column">
+                    <img class="demo" src="./images/thumb/thumbnail_6.png" onclick="currentSlide(6)" alt="Nature 2">
+                </div>
+                <div class="column">
+                    <img class="demo" src="./images/thumb/thumbnail_7.jpg" onclick="currentSlide(7)" alt="Portrait">
+                </div>
+                <div class="column">
+                    <img class="demo" src="./images/thumb/thumbnail_8.jpg" onclick="currentSlide(8)" alt="Sunset">
+                </div>
+                <div class="column">
+                    <img class="demo" src="./images/thumb/thumbnail_9.png" onclick="currentSlide(9)" alt="Urban">
                 </div>
             </div>
-        </section>
-        <!--END RSVP-->
-    
-    <!--FOOTER-->
-    <div id="footer">
-        www.chasinglightsphotoyyc.com &nbsp;|&nbsp; &copy; 2025
-    </div>
-    <!--END FOOTER-->
-                    
+        </div>
+        <!-- END LIGHTBOX MODAL -->
+
+        <!-- FOOTER -->
+        <div id="footer">
+            www.chasinglightsphotoyyc.com &nbsp;|&nbsp; &copy; 2025
+        </div>
+        <!-- END FOOTER -->
     </body>
 </html>

@@ -1,64 +1,44 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".photo-container img");
-    const modal = document.createElement("div");
-    modal.classList.add("lightbox");
-    modal.innerHTML = `
-        <div class="lightbox-content">
-            <span class="close">&times;</span>
-            <img class="lightbox-img" src="" alt="Enlarged Image">
-            <button class="prev">&lt;</button>
-            <button class="next">&gt;</button>
-        </div>
-    `;
-    document.body.appendChild(modal);
+// Open the Modal
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
+}
 
-    const lightboxImg = modal.querySelector(".lightbox-img");
-    const closeButton = modal.querySelector(".close");
-    const prevButton = modal.querySelector(".prev");
-    const nextButton = modal.querySelector(".next");
+// Close the Modal
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
 
-    let currentIndex = 0;
+var slideIndex = 1;
+showSlides(slideIndex);
 
-    images.forEach((img, index) => {
-        img.addEventListener("click", function () {
-            currentIndex = index;
-            lightboxImg.src = img.src;
-            modal.style.display = "flex";
-        });
-    });
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
 
-    function showImage(index) {
-        if (index >= 0 && index < images.length) {
-            lightboxImg.src = images[index].src;
-            currentIndex = index;
-        }
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
     }
 
-    prevButton.addEventListener("click", function () {
-        showImage(currentIndex - 1);
-    });
-
-    nextButton.addEventListener("click", function () {
-        showImage(currentIndex + 1);
-    });
-
-    closeButton.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
-
-    modal.addEventListener("click", function (event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-
-    document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-            modal.style.display = "none";
-        } else if (event.key === "ArrowLeft") {
-            showImage(currentIndex - 1);
-        } else if (event.key === "ArrowRight") {
-            showImage(currentIndex + 1);
-        }
-    });
-});
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    captionText.innerHTML = dots[slideIndex - 1].alt;
+}

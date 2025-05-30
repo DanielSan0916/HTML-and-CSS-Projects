@@ -1,57 +1,10 @@
-/*Lightbox styles*/
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-}
-
-.lightbox-content {
-    position: relative;
-    text-align: center;
-}
-
-.lightbox-img {
-    max-width: 80%;
-    max-height: 80vh;
-    border-radius: 8px;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    font-size: 24px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
 /*-------------------------------------------------------------------
     Generic Styles
 -------------------------------------------------------------------*/
 html {
     font-family: sans-serif;
     font-size: 62.5%;
-    -webkit-tap-highlight-color: rgba (0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
@@ -65,8 +18,7 @@ body {
     background-color: #fff;
 }
 
-footer,
-nav {
+footer, nav {
     display: block;
 }
 
@@ -74,6 +26,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif;
 }
 
+/* Headings */
 h1 {
    line-height: 50px;
    font-weight: 900;
@@ -83,8 +36,8 @@ h1 {
    color: #E91C1C;
    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
-h1::after { /* This is the underline */
-display: block;
+h1::after {
+    display: block;
     content: " ";
     height: 2px;
     width: 150px;
@@ -93,30 +46,7 @@ display: block;
     box-shadow: 5px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
-h2 {
-    line-height: 50px;
-    color: #E91C1C;
-}
-
-h3 {
-    line-height: 30px;
-    padding-bottom: 20px;
-}
-
-h4 {
-    padding-top: 25px;
-    line-height: 40px;
-    padding-bottom: 0px;
-    font-size: 22px;
-    font-weight: 900;
-}
-
-p {
-    font-weight: 300;
-    line-height: 30px;
-    padding-bottom: 15px;
-}
-
+/* Generic styling */
 .text-center {
     text-align: center;
 }
@@ -136,267 +66,140 @@ section {
     display: block;
 }
 
-.container {
+/* Containers */
+.container, .container-fluid {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
 
-.container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+/* Lightbox Gallery Styling */
+.row > .column {
+    padding: 0 8px;
 }
 
-.row {
-    margin-right: -15px;
-    margin-left: -15px;
-}
-.clearfix::after, /* :after is now ::after with a double colon */
-.container::after,
-.navbar::after {
-    clear: both;
+.row:after {
+    content: "";
     display: table;
-    content: " ";
+    clear: both;
 }
 
-.wrap {
-    height: 50%;
-    width: 100%;
-    position: absolute;
-    /* This ensures that the images cannot
-     render outside of their container
-     wihtout forcing any scrollbars */
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    text-align: center;
-}
-
-.menu-container {
-    max-height: 340px;
-    margin: 0% auto;
-    content: " ";
-    /* top: 0; 
-    left: 0; */
-    /* Position absolute; *//* to the top of the screen */
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-    /* backgound-color: rgba(255, 255, 255, 0.5); */
-}
-
-/*--------------------------------------------------
-    HOME SECTION STYLES
---------------------------------------------------*/
-#home {
-    background: url(../images/website_background.jpg) no-repeat 50% 50%;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width: 100%;
-    display: block;
-    height: auto;
-    padding-top: 350px; /* Thi is spacer before the Main title Logo */
-    padding-bottom: 500px; /* This is spacer after the Main title Logo */
-    color: #fff;
-}
-
-.head-main {
-    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.9);
-    font-variant: small-caps;
-    color: #fff;
-    letter-spacing: 5pt;
-    word-spacing: 21pt;
-    font-size: 4.5em;
-    text-align: left;
-    font-family: impact, sans-serif;
-    line-height: 2;
-    font-weight: 900;
-    border: 5px double #fff;
-    padding: 10px;
-}
-
-.head-sub-main {
-    font-size: 23px;
-    font-weight: 500;
-    padding: 50px 20px 10px 20px;
-    text-transform: uppercase;
-}
-
-.head-last {
-    font-size: 18px;
-    font-weight: 900;
-    padding: 5px 20px 20px 20px;
-    border: 1px dotted #fff;
-    padding: 5px;
-}
-
-/*--------------------------------------------------
-    CONTACT STYLES
---------------------------------------------------*/
-.flex-container {
-    display: -webkit-flex;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    border-radius: 8px;
-    margin: 0px auto;
-    background-color: rgba(100, 65, 0, .3);
-    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.5);
-}
-
-.photo-container {
-    display: flex;
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center;    /* Centers the content vertically */
-    overflow: hidden;       /* Hides any part of the image that exceeds the container */
-    width: 100%;            /* Ensures the container takes up the full width of its parent */
-    height: auto;           /* Adjusts the height proportionally */
-}
-
-.photo-container img {
-    max-width: 100%;        /* Keeps the image responsive */
-    height: auto;           /* Maintains the aspect ratio */
-    object-fit: cover;      /* Ensures the image covers the container without distortion */
-    display: block;         /* Prevents any unexpected inline spacing issues */
-}
-
-
-#contact {
-    background-color: #f5f3f3;
-}
-
-.reservation {
-width: 60%;
-padding: 10px;
-border-radius: 8px;
-margin: 0px auto;
-background-color: rgba(100, 65, 0, .3);
-box-shadow: -1px -1px -1px 0 rgba(0, 0, 0, 1), 1px 2px 10px 0 rgba(0, 0, 0, 0.5);
-}
-
-.reservation h2 {
-    width: 70%;
-    text-align: center;
-    margin: 0 auto;
-    color: #13161B;
-    font-weight: 500;
-    font-size: 1.3em;
-    letter-spacing: 0pt;
-    word-spacing: 0pt;
-}
-
-.reservation h2 span {
-    width: 70%;
-    text-align: center;
-    margin: 0px auto;
-    color: #13161B;
-    font-weight: 900;
-    font-size: 1.5em;
-    font-variant: small-caps;
-    letter-spacing: .4pt;
-    word-spacing: .3pt;
-}
-
-.reservation p {
-    color: #13161B;
-    width: 50%;
-    margin: 0px auto;
-}
-
-.reservation form {
-    font-size: 15px;
-    outline: none;
-    font-weight: 600;
-    color: #8D8E8F;
-    padding: 12px 12px;
-    width: 70%;
-    border: 1px solid #808080;
-    margin: 2% auto;
-    border-radius: 7px;
-    background: rgb(227, 222, 222);
-    box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.3);
-    font-family: 'Raleway', sans-serif;
-}
-
-.reservation input[type="text"] {
-    font-size: 15px;
-    outline: none;
-    font-weight: 600;
-    color: #8D8E8F;
-    padding: 2% 1% 2% 7%;
-    width: 80%;
-    border-top: 1px solid #090B0D;
-    border-right: 2px solid #424549;
-    border-bottom: 2px solid #424549;
-    border-left: 1px solid #090B0D;
-    margin: 10px 1em;
-    border-radius: 7px;
-    background: #13161B;
-    box-sizing: inset 0px 3px 0px 0px rgba(5, 5, 5, 0.15);
-    font-family: 'Raleway', sans-serif;
-}
-
-.reservation input[type="text"]:hover {
-    box-shadow: 0 0 18px rgba(100, 65, 0, .8);
-}
-
-.form-spacer {
-    padding: 30px 39px;
-}
-
-.terms {
-    margin: 30px 1px 0 0;
-    margin-top: 13%;
-    padding-left: 52px;
-    font-size: 14px;
-    line-height: 5px;
-    color: #000;
-    cursor: pointer;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    position: relative;
-    display: inline;
-    float: right;
-}
-
-.terms:hover{
-    color: orange;
-    text-decoration: underline;
-}
-
-.submit input[type="submit"] {
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    border: none;
-    font-weight: 900;
-    outline: none;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    margin: 0px 3%;
-    padding: 7px 0px;
+/* Create equal columns */
+.column {
+    float: left;
     width: 25%;
-    font-size: 18px;
-    transition: border-color 0.3s color 0.3s background-color 0.3s;
-    border-radius: 7px;
-    background-color: #797a7b;
-    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
-.submit input[type="submit"]:hover {
-    color: #000;
-    background-color: #8D8E8F;
-    box-shadow: inset 1px 2px 15px 0 rgba(0, 0, 0, 0.5);
+/* Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
 }
 
-/*--------------------------------------------------
-    FOOTER STYLES
---------------------------------------------------*/
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hide slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position "next" button */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Hover effect */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Caption text */
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+/* Thumbnail opacity */
+img.demo {
+    opacity: 0.6;
+}
+
+.active, .demo:hover {
+    opacity: 1;
+}
+
+/* Hover shadow effect */
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Footer */
 #footer {
     background-color: rgba(100, 65, 0, .3);
     color: #000;
@@ -422,22 +225,18 @@ box-shadow: -1px -1px -1px 0 rgba(0, 0, 0, 1), 1px 2px 10px 0 rgba(0, 0, 0, 0.5)
 
 @media (min-width:768px) {
     .container {
-        width: 750px;;
+        width: 750px;
     }
 }
 
 @media (min-width:992px) {
     .container {
-        width: 970px;;
+        width: 970px;
     }
 }
 
 @media (min-width:1200px) {
     .container {
-        width: 1170px;;
+        width: 1170px;
     }
 }
-
-/*--------------------------------------------------
-    END OF CSS STYLES
---------------------------------------------------*/
