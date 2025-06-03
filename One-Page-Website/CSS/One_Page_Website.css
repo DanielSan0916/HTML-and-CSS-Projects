@@ -1,242 +1,119 @@
-/*-------------------------------------------------------------------
-    Generic Styles
--------------------------------------------------------------------*/
-html {
-    font-family: sans-serif;
-    font-size: 62.5%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+/* ========== RESET & BASE STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-size: 14px;
-    margin: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.42857143;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
     color: #333;
-    background-color: #fff;
 }
 
-footer, nav {
-    display: block;
+/* ========== NAVIGATION ========== */
+.wrap {
+    background-color: #333;
+    display: flex;
+    justify-content: center;  /* Centers the navigation container */
+    padding: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Open Sans', sans-serif;
+.menu-container {
+    width: 100%;
 }
 
-/* Headings */
-h1 {
-   line-height: 50px;
-   font-weight: 900;
-   font-size: 30px;
-   text-transform: uppercase;
-   text-align: center;
-   color: #E91C1C;
-   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-}
-h1::after {
-    display: block;
-    content: " ";
-    height: 2px;
-    width: 150px;
-    background: #E91C1C;
-    margin: 5px auto 40px;
-    box-shadow: 5px 2px 3px rgba(0, 0, 0, 0.5);
+.menu {
+    display: flex;
+    justify-content: center;  /* Centers the menu items */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Generic styling */
-.text-center {
-    text-align: center;
+.menu li {
+    margin: 0 15px;
+    color: #fff;
+    font-weight: bold;
 }
 
-.heading-padding {
-    padding-bottom: 40px;
+.menu a {
+    color: #fff;
+    text-decoration: none;
 }
 
-section {
-    padding-top: 50px;
-    margin-top: 50px;
+/* ========== HOME SECTION ========== */
+#home {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e2e2e2; /* Replace with a background image if needed */
 }
 
-.navbar {
-    height: 105px;
-    max-height: 340px;
-    display: block;
+.head-main {
+    font-size: 2.5rem;
+    color: #333;
 }
 
-/* Containers */
-.container, .container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+/* ========== GALLERY SECTION ========== */
+#gallery {
+    padding: 40px 0;
+    background: #fff;
 }
 
-/* Lightbox Gallery Styling */
-.row > .column {
-    padding: 0 8px;
+/* Incorporating your gallery grid code */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Adjust spacing between images */
+    max-width: 800px; /* Adjust width to fit your design */
+    margin: auto;
 }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional for styling */
 }
 
-/* Create equal columns */
-.column {
-    float: left;
-    width: 25%;
-}
-
-/* Modal (background) */
+/* ========== LIGHTBOX MODAL ========== */
+/* (Include additional lightbox styling rules here if applicable) */
 .modal {
-    display: none;
+    display: none; /* Hidden by default */
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: black;
+    background-color: rgba(0,0,0,0.9);
 }
 
-/* Modal Content */
 .modal-content {
     position: relative;
-    background-color: #fefefe;
     margin: auto;
-    padding: 0;
-    width: 90%;
-    max-width: 1200px;
+    max-width: 900px;
 }
 
-/* Close Button */
+/* Additional styling for close button, navigation arrows, captions, etc. */
 .close {
-    color: white;
     position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
     font-weight: bold;
-}
-
-.close:hover, .close:focus {
-    color: #999;
-    text-decoration: none;
     cursor: pointer;
 }
 
-/* Hide slides by default */
-.mySlides {
-    display: none;
-}
-
-/* Navigation buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/* Position "next" button */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* Hover effect */
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* Caption text */
-.caption-container {
-    text-align: center;
-    background-color: black;
-    padding: 2px 16px;
-    color: white;
-}
-
-/* Thumbnail opacity */
-img.demo {
-    opacity: 0.6;
-}
-
-.active, .demo:hover {
-    opacity: 1;
-}
-
-/* Hover shadow effect */
-img.hover-shadow {
-    transition: 0.3s;
-}
-
-.hover-shadow:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-                0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-/* Footer */
+/* ========== FOOTER ========== */
 #footer {
-    background-color: rgba(100, 65, 0, .3);
-    color: #000;
-    text-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 1);
-    padding: 20px 50px 20px 50px;
-    text-align: right;
-}
-
-/*--------------------------------------------------
-    @MEDIA QUERIES STYLES
---------------------------------------------------*/
-@media all and (max-width: 640px) and (min-width: 381px) {
-    .head-main {
-        font-size: 28px;
-    }
-}
-
-@media all and (max-width: 381px) and (min-width: 200px) {
-    .head-main {
-        font-size: 24px;
-    }
-}
-
-@media (min-width:768px) {
-    .container {
-        width: 750px;
-    }
-}
-
-@media (min-width:992px) {
-    .container {
-        width: 970px;
-    }
-}
-
-@media (min-width:1200px) {
-    .container {
-        width: 1170px;
-    }
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
 }
